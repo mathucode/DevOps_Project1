@@ -11,18 +11,18 @@
     - name: start tomcat
       service: 
         name: tomcat 
-       state: started
+        state: started
     - name: Install needed packages
       yum: 
-       name={{item}} 
-       state=present
+        name={{item}} 
+        state=present
       loop:
-       - git
-       - docker
+        - git
+        - docker
     - name: Start docker service
       service: 
-        name=docker 
-        state=started
+         name=docker 
+         state=started
     - name: clone the github for dockerfile
       git: repo=https://github.com/mathucode/sample-project.git dest=/tmp/project1_repo    
            command: chdir=/tmp/project1_repo docker build -t myproject:1 .
