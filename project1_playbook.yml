@@ -4,8 +4,6 @@
   become: true
   become_user: root
   tasks:
-    - name: Install sshpass
-      yum: name=sshpass state=present
     - name: install tomcat
       yum: name=tomcat state=present
     - name: start tomcat
