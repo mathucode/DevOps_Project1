@@ -1,2 +1,2 @@
 [Test_servers]
-18.216.15.158 ansible_user=ec2-user
+172.31.3.70 ansible_user=ec2-user
