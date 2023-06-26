@@ -14,7 +14,7 @@
         state: started
     - name: Install needed packages
       yum: 
-        name={{item}} 
+        name: "{{item}}"
         state: present
       loop:
         - git
