@@ -14,15 +14,15 @@
         state: started
     - name: Install needed packages
       yum: 
-        name={{item}} 
-        state=present
+        name: {{item}} 
+        state: present
       loop:
         - git
         - docker
     - name: Start docker service
       service: 
-         name=docker 
-         state=started
+         name: docker 
+         state: started
     - name: clone the github for dockerfile
       git: repo:https://github.com/mathucode/sample-project.git 
            dest:/tmp/project1_repo    
