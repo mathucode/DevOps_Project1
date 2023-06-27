@@ -27,6 +27,10 @@
       git:
          repo: https://github.com/mathucode/sample-project.git 
          dest: /tmp/project1_repo 
+    - name: Copy addressbook.war to Dockerfile directory
+      copy:
+        src: /var/lib/jenkins/workspace/Project1/addressbook.war
+        dest: /tmp/project1_repo/addressbook.war
     - name: Build the docker file  
       command:
          cmd: docker build -t myproject:1 .
