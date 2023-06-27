@@ -27,7 +27,7 @@
       git:
          repo: https://github.com/mathucode/sample-project.git 
          dest: /tmp/project1_repo 
-         args:
+         command:
            chdir: /tmp/project1_repo
     - name: Build the docker file  
       command: docker build -t myproject:1 .
