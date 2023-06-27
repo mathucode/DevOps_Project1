@@ -26,9 +26,9 @@
     - name: clone the github for dockerfile
       git:
          repo: https://github.com/mathucode/sample-project.git 
-         dest: /tmp/project1_repo    
-    - name: Change the directory       
-      command: chdir=/tmp/project1_repo   
+         dest: /tmp/project1_repo 
+         args:
+           chdir: /tmp/project1_repo
     - name: Build the docker file  
       command: docker build -t myproject:1 .
     - name: create container
