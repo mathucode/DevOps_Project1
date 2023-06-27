@@ -27,6 +27,7 @@
       git:
          repo: https://github.com/mathucode/sample-project.git 
          dest: /tmp/project1_repo 
+    - name: Change to project directory
       command:
          chdir: /tmp/project1_repo
     - name: Build the docker file  
